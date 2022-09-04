@@ -9,6 +9,6 @@ export const store = configureStore({
         getTodos : getTodoReducer,
         addtodo : addtodoReducer,
         deletetodo : DeletetodoReducer,
-        checkboxtodo : CheckboxtodoReducer
+        checkboxtodo : CheckboxtodoReducer,
     }
 })
