@@ -1,10 +1,10 @@
 import { createSlice,createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios'
-
+const PROXY = window.location.hostname === 'localhost' ? '' : 'https://mern-epxress-todo-api.herokuapp.com';
 export const DeleteTodo = createAsyncThunk(
     'DeleteTodo',
     async (id) => {
-        const response = await axios.delete(`/todo/delete/${id}`);
+        const response = await axios.delete(`${PROXY}/todo/delete/${id}`);
         return response.data
     }
   

@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import TodoInputForm from "./TodoInputForm";
 import { AiFillCloseCircle } from "react-icons/ai";
-import TodoDate from "./TodoDate";
 
 const TodoInputStyled = styled.div`
   padding-top: 20px;
@@ -95,7 +94,6 @@ const TodoInput = () => {
   };
   return (
     <TodoInputStyled>
-      <TodoDate />
         <h1>TODO LIST</h1>
         <div onClick={InputOpen} className="toggle">
           +

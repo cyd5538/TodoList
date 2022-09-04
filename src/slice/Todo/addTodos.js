@@ -1,10 +1,11 @@
 import { createSlice,createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios'
+const PROXY = window.location.hostname === 'localhost' ? '' : 'https://mern-epxress-todo-api.herokuapp.com';
 
 export const addTodo = createAsyncThunk(
     'addTodos',
     async (text) => {
-        const response = await axios.post('/todo/new', {text});
+        const response = await axios.post(`${PROXY}/todo/new`, {text});
         return response.data;
     }
 )
